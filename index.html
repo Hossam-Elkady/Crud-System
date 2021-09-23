@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container-fluid my-5">
+        <div class="bg-light p-5 border shadow-lg ">
+            <h2>CRUD System</h2>
+            <div>
+                <label>Product Name: </label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Enter Product Name" aria-label="Username"
+                        aria-describedby="basic-addon1" id="productName">
+                </div>
+                <div>
+                    <p class="text-danger text-center h6 d-none" id="nameValidation">please enter capital letter then 2 small at least</p>
+                </div>
+            </div>
+            <div>
+                <label>Product Price: </label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Enter Product Price" aria-label="Username"
+                        aria-describedby="basic-addon1" id="productPrice">
+                </div>
+                <div>
+                    <p class="text-danger text-center h6 d-none" id="priceValidation">please enter 1 to 10 digits</p>
+                </div>
+            </div>
+            <div>
+                <label>Product Category: </label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Enter Product Category" aria-label="Username"
+                        aria-describedby="basic-addon1" id="productCategory">
+                </div>
+                <div>
+                    <p class="text-danger text-center h6 d-none" id="categoryValidation">please enter capital letter then 2 small at least</p>
+                </div>
+            </div>
+            <div>
+                <label>Product Description: </label>
+                <div class="input-group">
+                    <textarea class="form-control" type="text" placeholder="Enter Product Description"
+                        id="productDescription" aria-label="With textarea"></textarea>
+                </div>
+            </div>
+            <div id="add-editBtn">
+                <button onclick="addBtn()" class="bg-info py-3 px-4 border-0 mt-5" id="Btn">Add Product</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="input-group rounded mb-5 ">
+            <input type="search" class="form-control rounded" onkeyup="search(this.value)" placeholder="Search"
+                aria-label="Search" aria-describedby="search-addon" id="search">
+        </div>
+        
+        <table class="table table-striped" id="table">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Product Name</th>
+                    <th>Product Category</th>
+                    <th>Product Price</th>
+                    <th>Product Description</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+
+            </tbody>
+        </table>     
+    </div>
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
